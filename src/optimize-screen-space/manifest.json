@@ -1,0 +1,32 @@
+{
+    "name": "Optimize screen space",
+    "version": "0.0.0.1",
+    "manifest_version": 3,
+    "description": "An extension to optimizing the screen real estate for certain web sites.",
+    "icons": {
+        "16": "icons/16x16.png",
+        "48": "icons/48x48.png",
+        "128": "icons/128x128.png"
+    },
+    "action": {
+        "default_popup": "popup/popup.html"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "*://localhost:*/*",
+                "*://whiteboard.office.com/*"
+            ],
+            "js": [
+                "content-scripts/content.js"
+            ]
+        }
+    ],
+    "permissions": [
+        "storage"
+    ],
+    "host_permissions": [
+        "*://localhost/*",
+        "*://whiteboard.office.com/*"
+    ]
+}
