@@ -9,6 +9,8 @@ const enableOptimization = (flag) => {
         style.sheet.insertRule("#shellHeader.showShellHeader~.contentViewPort { top: 0px !important; height: 100vh !important; }");
         style.sheet.insertRule("#shellHeader.showShellHeader~.contentViewPort .canvasFocus { height: 100vh }");
         style.sheet.insertRule("#shellHeader.showShellHeader~.contentViewPort .drawingCanvas { height: 100vh !important; }");
+        style.sheet.insertRule("#shellHeader.showShellHeader~.contentViewPort .canvasFocus .outlineFocus { top: 0px !important; height: 100vh !important; outline: none !important; }");
+        style.sheet.insertRule("#shellHeader.showShellHeader~.chrome { top: 0px !important; height: 100vh !important; }");
     }
     else {
         while (style.sheet.cssRules.length > 0) {
